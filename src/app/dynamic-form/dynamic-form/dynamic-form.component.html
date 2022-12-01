@@ -1,0 +1,6 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <ng-container *ngFor="let field of fields">
+    <app-form-field *ngIf="!field.hidden" [field]="field" [form]="form" [submitted]="submitted"></app-form-field>
+  </ng-container>
+  <button type="submit">Submit</button>
+</form>

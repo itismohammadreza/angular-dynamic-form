@@ -1,0 +1,23 @@
+form {
+  padding: 1rem;
+
+  app-form-field {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  button {
+    color: #fff;
+    background-color: #007bff;
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+    border: 1px solid #007bff;
+    padding: 0.675rem 1.2rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+}
