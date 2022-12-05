@@ -1,0 +1,8 @@
+<div class="field-wrapper">
+  <input
+    [(ngModel)]="value"
+    [attr.id]="fieldId"
+    type="checkbox"
+    (change)="onChange($event)"/>
+  <label [attr.for]="fieldId">{{ label }}</label>
+</div>
