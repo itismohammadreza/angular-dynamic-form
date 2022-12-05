@@ -1,8 +1,0 @@
-<div class="field-wrapper" [ngClass]="field.type" [formGroup]="form">
-  <label [attr.for]="fieldId">{{ field.label }}</label>
-  <ng-container [ngSwitch]="field.type">
-    <input *ngSwitchCase="'text'" type="text" [formControlName]="field.field" [id]="fieldId"/>
-    <input *ngSwitchCase="'check'" type="checkbox" [formControlName]="field.field" [id]="fieldId"/>
-  </ng-container>
-</div>
-<small class="error" *ngIf="hasError()">{{ field.label }} is required</small>
