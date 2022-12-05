@@ -11,7 +11,6 @@ export class DynamicFormComponent implements OnInit {
   @Input() fields!: FieldItem[];
 
   form = new FormGroup({});
-  submitted: boolean = false;
 
   constructor() {
   }
@@ -27,7 +26,6 @@ export class DynamicFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
     console.log(this.form.value);
   }
 }
