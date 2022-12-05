@@ -1,0 +1,11 @@
+<div class="field-wrapper">
+  <label [attr.for]="fieldId">{{ label }}</label>
+  <input
+    [(ngModel)]="value"
+    [attr.id]="fieldId"
+    [ngClass]="{ 'error': isInvalid() }"
+    type="text"
+    (blur)="onBlur()"
+    (input)="onInput($event)"/>
+</div>
+<small class="error" *ngIf="isInvalid()">{{ label }} is required</small>
