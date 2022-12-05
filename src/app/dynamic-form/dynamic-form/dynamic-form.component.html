@@ -1,6 +1,11 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <ng-container *ngFor="let field of fields">
-    <app-form-field *ngIf="!field.hidden" [field]="field" [form]="form" [submitted]="submitted"></app-form-field>
-  </ng-container>
+  <div *ngFor="let field of fields">
+    <ng-container [ngSwitch]="field.type">
+      <ng-container *ngIf="!field.hidden">
+        <app-input-text *ngSwitchCase="'text'" [label]="field.label" [formControlName]="field.field"></app-input-text>
+        <app-check-box *ngSwitchCase="'check'" [label]="field.label" [formControlName]="field.field"></app-check-box>
+      </ng-container>
+    </ng-container>
+  </div>
   <button type="submit">Submit</button>
 </form>

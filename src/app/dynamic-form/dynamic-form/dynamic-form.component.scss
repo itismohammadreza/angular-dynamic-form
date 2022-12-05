@@ -1,9 +1,7 @@
 form {
   padding: 1rem;
 
-  app-form-field {
-    display: block;
-
+  div {
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
